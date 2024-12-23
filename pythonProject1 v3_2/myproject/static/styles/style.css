@@ -1,0 +1,52 @@
+  .navbar {
+    flex-direction: column;
+    float: left;
+  }
+
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: column;
+    margin-top: 100px;
+    text-transform: uppercase;
+    margin-left: 0.5em;
+  }
+
+  .navbar-nav li {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav a {
+    text-decoration: none;
+    color: #353535;
+  }
+
+  .navbar {
+    width: 10em;
+    height: 100vh;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    margin-left: 0.5em;
+    padding-bottom: 0;
+    border-bottom: 4px solid #464646;
+  }
+
+  form input {
+    margin-bottom: 0.7em;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    justify-content: start;
+    gap: 0px;
+  }
+
+  .main {
+    padding: 10px;
+  }
+
+  /* index */
+  .leftovers {
+    margin-top: 50px;
+  }

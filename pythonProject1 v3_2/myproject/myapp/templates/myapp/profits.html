@@ -1,0 +1,37 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h2>Прибыль</h2>
+{% if records %}
+<div class="leftovers">
+    <table class="table">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Quantite</th>
+            <th scope="col">Price</th>
+            <th scope="col">Total</th>
+            <th scope="col">N_Profit</th>
+            <th scope="col">Rate</th>
+            <th scope="col">TS</th>
+        </tr>
+        {% for elem in records %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{elem.ts}}</td>
+            <td>{{elem.quantite}}</td>
+            <td>{{elem.price}}</td>
+            <td>{{elem.total}}</td>
+            <td>{{elem.n_profit}}</td>
+            <td>{{elem.rate}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% else %}
+<p>У нас нет записей</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'myapp/base.html' %}
+
+{% block title %}
+{{ title }}
+{% endblock %}
+
+{% block content %}
+<h2>Главная: Остатки товара</h2>
+{% if records %}
+<div class="leftovers">
+    <table class="table">
+        <tr>
+            <th scope="col">№</th>
+            <th scope="col">Название</th>
+            <th scope="col">Описание</th>
+            <th scope="col">Остаток</th>
+            <th scope="col">Цена реализации</th>
+        </tr>
+        {% for elem in records %}
+        <tr>
+            <th scope="row">{{ forloop.counter }}</th>
+            <td>{{elem.title}}</td>
+            <td>{{elem.descriprions}}</td>
+            <td>{{elem.n_quantite}}</td>
+            <td>{{elem.n_price}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% else %}
+<p>У нас нет записей</p>
+{% endif %}
+{% endblock %}
